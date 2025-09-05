@@ -1,0 +1,123 @@
+/* Chairman Section */
+.chairman-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--space-5), 5vw, var(--space-10));
+  align-items: center;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 clamp(1rem, 3vw, 1.25rem) clamp(2rem, 5vw, 2.5rem) rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease-out;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+  border: 2px solid rgba(126, 154, 253, 0.4);
+}
+
+.image-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Content */
+.content {
+  padding: clamp(var(--space-2), 2vw, var(--space-4));
+  animation: fadeIn 1s ease-out;
+}
+
+.message {
+  margin-bottom: clamp(var(--space-3), 3vw, var(--space-5));
+  font-size: var(--step-0);
+  line-height: 1.8;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+/* Signature Section */
+.sign-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signature {
+  font-style: italic;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-top: clamp(var(--space-3), 3vw, var(--space-5));
+  position: relative;
+  font-size: var(--step-0);
+}
+
+.signature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: clamp(1rem, 4vw, 1.5rem);
+  height: 2px;
+  background: var(--accent-color);
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(var(--space-1), 1vw, var(--space-2));
+  background: var(--secondary-color);
+  color: var(--light-color);
+  padding: clamp(0.5rem, 1vw, 0.65rem) clamp(0.75rem, 2vw, 1.25rem);
+  border-radius: 9999px; /* pill style */
+  font-size: var(--step-0);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--hover-color);
+}
+
+.read-more-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .chairman-section {
+    grid-template-columns: 1fr;
+    gap: clamp(var(--space-4), 4vw, var(--space-6));
+  }
+
+  .section-title {
+    font-size: var(--step-3);
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

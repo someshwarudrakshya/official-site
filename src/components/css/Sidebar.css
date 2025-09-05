@@ -1,0 +1,118 @@
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.125rem, 0.2vw, 0.25rem); /* fluid gap */
+}
+
+/* Link Wrapper */
+.sidebar-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Shared Item Styles */
+.sidebar-item {
+  position: relative;
+  height: clamp(2.5rem, 5vw, 3rem); /* fluid height */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Shared Icon Styles */
+.sidebar-icon {
+  width: clamp(2.5rem, 5vw, 3rem); /* fluid width */
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--light-color);
+  z-index: 2;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+}
+
+/* Shared Text Panel Styles */
+.sidebar-panel {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  max-width: 0;
+  transition: max-width 0.4s ease-out;
+  white-space: nowrap;
+}
+
+.sidebar-text {
+  color: var(--light-color);
+  padding: 0 clamp(var(--space-2), 2vw, var(--space-3));
+  min-width: max-content;
+  font-weight: 500;
+  font-size: var(--step-0);
+}
+
+/* Hover Effects */
+.sidebar-item:hover .sidebar-panel {
+  max-width: clamp(10rem, 20vw, 12.5rem); /* fluid max-width */
+}
+
+.sidebar-link:hover .sidebar-icon {
+  filter: brightness(110%);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color Variants */
+.phone .sidebar-icon,
+.phone .sidebar-panel {
+  background: #008c44;
+}
+
+.events .sidebar-icon,
+.events .sidebar-panel {
+  background: #9b4479;
+}
+
+.email .sidebar-icon,
+.email .sidebar-panel {
+  background: #ca5a0d;
+}
+
+.whatsapp .sidebar-icon,
+.whatsapp .sidebar-panel {
+  background: #25d366;
+}
+
+.messenger .sidebar-icon,
+.messenger .sidebar-panel {
+  background: #0084ff;
+}
+
+.facebook .sidebar-icon,
+.facebook .sidebar-panel {
+  background: #3b5998;
+}
+
+/* Animated Icons */
+.whatsapp .sidebar-icon i,
+.messenger .sidebar-icon i,
+.facebook .sidebar-icon i {
+  animation: pulse 2s infinite;
+}
+
+
