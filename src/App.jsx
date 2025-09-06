@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+
 import Home from "./pages/Homepage";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -29,7 +30,7 @@ import Required from "./pages/services/Required";
 
 export default function App() {
   return (
-    <>
+    <main className="main-content">
       <Header />
       <Navbar />
       <PageScroll />
@@ -57,6 +58,6 @@ export default function App() {
       </Routes>
       <div className="section-divider"></div>
       <Footer />
-    </>
+    </main>
   );
 }
