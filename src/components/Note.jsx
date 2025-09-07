@@ -5,7 +5,7 @@ import "./css/Note.css";
 const notes = {
   Loan: `We prioritize our members’ financial goals and needs, providing reliable and fair loan facilities to strengthen the community. <br/><strong>Note:</strong> For detailed terms, conditions, and required documents, please contact your nearest branch.`,
 
-  Savings: `We prioritize our members’ financial goals and needs, providing reliable and fair savings facilities to strengthen the community. br/><strong>Note:</strong> For detailed terms, conditions, and required documents, please contact your nearest branch.`,
+  Savings: `We prioritize our members’ financial goals and needs, providing reliable and fair savings facilities to strengthen the community. <br/><strong>Note:</strong> For detailed terms, conditions, and required documents, please contact your nearest branch.`,
 
   Download: `We prioritize our members’ financial security, providing transparent and fair insurance options to strengthen the community. <br/><strong>Note:</strong> For detailed terms, conditions, and required documents, please contact your nearest branch.`,
 

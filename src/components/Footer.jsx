@@ -7,6 +7,7 @@ import contactImg from "../assets/contact.avif";
 import "./css/Footer.css";
 
 export default function Footer() {
+  // Get current year dynamically
   const currentYear = new Date().getFullYear();
 
   return (
@@ -43,19 +44,19 @@ export default function Footer() {
             <h4>Our Schemes</h4>
             <ul>
               <li>
-                <Link to="/services/saving">Savings Accounts</Link>
+                <Link to="/schemes/savings">Savings Accounts</Link>
               </li>
               <li>
-                <Link to="/services/loan">Affordable Loans</Link>
+                <Link to="/schemes/loans">Affordable Loans</Link>
               </li>
               <li>
-                <Link to="/services/required">Daily Savings</Link>
+                <Link to="/schemes/daily-savings">Daily Savings</Link>
               </li>
               <li>
-                <Link to="/services/required">Easy Withdrawals</Link>
+                <Link to="/schemes/withdrawals">Easy Withdrawals</Link>
               </li>
               <li>
-                <Link to="/services/required">Fast Processing</Link>
+                <Link to="/schemes/fast-processing">Fast Processing</Link>
               </li>
             </ul>
           </div>
@@ -65,19 +66,19 @@ export default function Footer() {
             <h4>Membership</h4>
             <ul>
               <li>
-                <Link to="/about/messagefrom">Benefits</Link>
+                <Link to="/membership/benefits">Benefits</Link>
               </li>
               <li>
-                <Link to="/about/messagefrom">How to Join</Link>
+                <Link to="/membership/how-to-join">How to Join</Link>
               </li>
               <li>
-                <Link to="/about/messagefrom">Farmer Resources</Link>
+                <Link to="/membership/farmer-resources">Farmer Resources</Link>
               </li>
               <li>
-                <Link to="/about/messagefrom">Training Programs</Link>
+                <Link to="/membership/training">Training Programs</Link>
               </li>
               <li>
-                <Link to="/about/messagefrom">Success Stories</Link>
+                <Link to="/membership/success-stories">Success Stories</Link>
               </li>
             </ul>
           </div>
