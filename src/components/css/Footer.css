@@ -24,14 +24,15 @@
 }
 
 /* Footer Column Headings */
-.footer-col h3 {
+.footer-col h4 {
   margin-bottom: var(--space-4);
   position: relative;
   padding-bottom: var(--space-2);
   font-size: var(--step-2);
+  color: var(--light-color);
 }
 
-.footer-col h3::after {
+.footer-col h4::after {
   content: "";
   position: absolute;
   left: 0;
