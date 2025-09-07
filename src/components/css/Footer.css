@@ -8,12 +8,11 @@
 
 /* Footer Base */
 .footer {
-    display: flex;
+  display: flex;
   align-items: center;
   background: var(--hf-bg);
   color: var(--light-color);
-  padding: clamp(var(--space-4), 4vw, var(--space-6)) 0
-           clamp(var(--space-3), 3vw, var(--space-5));
+  padding: clamp(var(--space-4), 4vw, var(--space-6)) 0 clamp(var(--space-3), 3vw, var(--space-5));
 }
 
 /* Footer Grid */
@@ -56,6 +55,7 @@
   color: var(--light-color);
   transition: color 0.3s ease;
   font-size: var(--step-0);
+  border-bottom: 2px solid transparent;
 }
 
 .footer-col ul li a:hover {
@@ -136,7 +136,7 @@
 
 
 @media (max-width: 576px) {
- footer {
+  footer {
     flex-direction: column;
     text-align: center;
   }

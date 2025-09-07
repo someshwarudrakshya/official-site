@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // for same-tab navigation
+import { useNavigate } from "react-router-dom";
 import "./css/Utilities.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,9 +10,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Utilities() {
-  const navigate = useNavigate(); // for same-tab navigation
+  const navigate = useNavigate();
+  const baseUrl = window.location.origin; // Get full base URL
 
-  // Reusable utilities
+  // Utilities configuration
   const utilities = [
     {
       icon: faCalculator,
@@ -20,7 +21,7 @@ export default function Utilities() {
       desc: "Effortlessly compute your loan installments.",
       btnText: "Calculate",
       btnClass: "btn btn-primary",
-      onClick: () => window.open("/EmiCalculator", "_blank"),
+      onClick: () => window.open(`${baseUrl}/#/emicalculator`, "_blank"),
     },
     {
       icon: faCalendarAlt,
@@ -28,7 +29,7 @@ export default function Utilities() {
       desc: "Discover the vibrant tapestry of the Nepali calendar.",
       btnText: "Calendar",
       btnClass: "btn btn-secondary",
-      onClick: () => window.open("/NepalWidgets", "_blank"),
+      onClick: () => window.open(`${baseUrl}/#/nepalwidgets`, "_blank"),
     },
     {
       icon: faDownload,
@@ -36,9 +37,13 @@ export default function Utilities() {
       desc: "Seamlessly access essential forms and documents.",
       btnText: "Download",
       btnClass: "btn btn-secondary",
-      onClick: () => navigate("/Download"),
+      onClick: () => navigate("/download"), // stays same-tab
     },
   ];
+
+  const noticeCardOnClick = () => {
+    window.open(`${baseUrl}/#/news-events`, "_blank");
+  };
 
   return (
     <section className="container mb-5">
@@ -81,10 +86,7 @@ export default function Utilities() {
               <strong>For Recent Highlights & Announcements</strong>
             </p>
             <p className="small mb-1">Click Link Below</p>
-            <button
-              className="btn btn-danger"
-              onClick={() => window.open("/news&events", "_blank")}
-            >
+            <button className="btn btn-danger" onClick={noticeCardOnClick}>
               Updates & Highlights
             </button>
           </div>

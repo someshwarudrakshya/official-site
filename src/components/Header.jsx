@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/header.webp";
 import "./css/Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +31,9 @@ export default function Header() {
     <header className={`header ${scrolled ? "header-small" : ""}`}>
       <div className="header-container">
         <div className="header-left">
-          <img src={logo} alt="Company Logo" className="header-logo" />
+          <Link to="/">
+            <img src={logo} alt="Company Logo" className="header-logo" />
+          </Link>
         </div>
 
         <div className="header-right">

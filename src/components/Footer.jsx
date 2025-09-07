@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import contactImg from "../assets/contact.avif";
@@ -6,79 +7,82 @@ import contactImg from "../assets/contact.avif";
 import "./css/Footer.css";
 
 export default function Footer() {
-  // Get current year dynamically
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <div className="Footer-container">
         <div className="footer-grid">
+          {/* Quick Links */}
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="about.html">About Us</a>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <a href="products.html">Services</a>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <a href="download.html">Download</a>
+                <Link to="/download">Download</Link>
               </li>
               <li>
-                <a href="gallery.html">Gallery</a>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li>
-                <a href="contact.html">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
 
+          {/* Our Schemes */}
           <div className="footer-col">
             <h4>Our Schemes</h4>
             <ul>
               <li>
-                <a href="#">Savings Accounts</a>
+                <Link to="/services/saving">Savings Accounts</Link>
               </li>
               <li>
-                <a href="#">Affordable Loans</a>
+                <Link to="/services/loan">Affordable Loans</Link>
               </li>
               <li>
-                <a href="#">Daily Savings</a>
+                <Link to="/services/required">Daily Savings</Link>
               </li>
               <li>
-                <a href="#">Easy Withdrawals</a>
+                <Link to="/services/required">Easy Withdrawals</Link>
               </li>
               <li>
-                <a href="#">Fast Processing</a>
+                <Link to="/services/required">Fast Processing</Link>
               </li>
             </ul>
           </div>
 
+          {/* Membership */}
           <div className="footer-col">
             <h4>Membership</h4>
             <ul>
               <li>
-                <a href="#">Benefits</a>
+                <Link to="/about/messagefrom">Benefits</Link>
               </li>
               <li>
-                <a href="#">How to Join</a>
+                <Link to="/about/messagefrom">How to Join</Link>
               </li>
               <li>
-                <a href="#">Farmer Resources</a>
+                <Link to="/about/messagefrom">Farmer Resources</Link>
               </li>
               <li>
-                <a href="#">Training Programs</a>
+                <Link to="/about/messagefrom">Training Programs</Link>
               </li>
               <li>
-                <a href="#">Success Stories</a>
+                <Link to="/about/messagefrom">Success Stories</Link>
               </li>
             </ul>
           </div>
 
+          {/* Contact Person */}
           <div className="footer-col contact-person">
             <h4>Contact Person</h4>
             <img
@@ -95,6 +99,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="copyright">
           <p>
             &copy; 2023 - {currentYear} Someshwar Rudrakshya Saving & Credit
