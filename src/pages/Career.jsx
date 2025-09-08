@@ -93,6 +93,7 @@ export default function Career() {
         </div>
       </div>
 
+      {/* Note Section */}
       <Note type="Career" />
     </div>
   );

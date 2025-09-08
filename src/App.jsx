@@ -30,7 +30,7 @@ import Required from "./pages/services/Required";
 
 export default function App() {
   return (
-    <main className="main-content">
+    <main>
       <Header />
       <Navbar />
       <PageScroll />

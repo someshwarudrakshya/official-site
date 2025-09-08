@@ -46,28 +46,26 @@ export default function Services() {
     <div className="container">
       <div className="section-title">
         <h2>
-          Our <span className="highlight"> Services</span>
+          Our <span className="highlight">Services</span>
         </h2>
-
         <p>
           Discover a range of financial services designed to empower our members
           and promote economic growth.
         </p>
       </div>
-      {services.map((service, index) => (
-        <section
-          className={`service-section ${index % 2 === 0 ? "left" : "right"}`}
-          key={index}
-        >
-          <div className="service-icon">{service.icon}</div>
-          <div className="service-content">
+
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-icon">{service.icon}</div>
             <h2 className="service-title">{service.title}</h2>
             <p className="service-description">{service.description}</p>
           </div>
-        </section>
-      ))}
+        ))}
+      </div>
 
-        <Note type="Services" />
+      {/* Note Section */}
+      <Note type="Services" />
     </div>
   );
 }

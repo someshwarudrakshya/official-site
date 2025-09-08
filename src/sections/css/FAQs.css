@@ -38,9 +38,10 @@
     padding: 1rem 1.2rem;
     cursor: pointer;
     font-weight: 600;
-    background: #fff;
+    background: var(--background);
     color: #333;
     transition: background 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
 .faq-question:hover {
@@ -50,8 +51,7 @@
 
 .faq-question.active {
     background: var(--btn-color);
-    color: #fff;
-    
+    color: var(--light-color);
 }
 
 /* Mobile answer (below question) */
@@ -76,7 +76,7 @@
 
 /* Right column - desktop answers */
 .faq-answers {
-    background: #fff;
+    background: var(--background);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);

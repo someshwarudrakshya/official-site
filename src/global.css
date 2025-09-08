@@ -11,18 +11,14 @@
   --hover-color: #1e40af;
 
   --light-color: #fff;
-  --dark-color: #111827;
+  --dark-color: #0b1429;
   --text-color: #1b1f27;
   --text-muted: #6b7280;
 
   /* Fluid Spacing scale (based on viewport width) */
   --space-fluid-min: 0.25rem;
   --space-fluid-max: 1rem;
-  --space-1: clamp(
-    var(--space-fluid-min),
-    0.5vw + 0.125rem,
-    var(--space-fluid-max)
-  );
+  --space-1: clamp(var(--space-fluid-min), 0.5vw + 0.125rem, var(--space-fluid-max));
   --space-2: clamp(0.375rem, 1vw + 0.125rem, 1rem);
   --space-3: clamp(0.5rem, 1.5vw + 0.125rem, 1.25rem);
   --space-4: clamp(0.75rem, 2vw + 0.25rem, 1.5rem);
@@ -38,10 +34,8 @@
   --radius-lg: clamp(0.75rem, 1.5vw, 1.25rem);
 
   /* Fluid Shadows */
-  --shadow-sm: 0 clamp(0.0625rem, 0.125vw, 0.125rem)
-    clamp(0.125rem, 0.25vw, 0.25rem) rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem)
-    rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 clamp(0.0625rem, 0.125vw, 0.125rem) clamp(0.125rem, 0.25vw, 0.25rem) rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem) rgba(0, 0, 0, 0.08);
 
   /* Fluid Container max-widths */
   --container-sm: min(95vw, 640px);
@@ -153,9 +147,9 @@ h3 {
 }
 
 h4 {
-   margin-top: 25px;
-   font-size: var(--step-2);
-   color: var(--primary-color);
+  margin-top: 25px;
+  font-size: var(--step-2);
+  color: var(--primary-color);
 }
 
 h5 {
@@ -234,23 +228,26 @@ h6 {
 /* Fluid Buttons */
 .btn {
   appearance: none;
-  border: 1px solid transparent;
-  border-radius: var(--radius-md);
-  padding: clamp(var(--space-1), 2vw, var(--space-1))
-    clamp(var(--space-3), 3vw, var(--space-4));
-  background: var(--btn-color);
-  color: var(--light-color);
-  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(var(--space-1), 1vw, var(--space-2));
-  transition: all 0.2s ease;
-  cursor: pointer;
-  box-shadow: var(--shadow-sm);
+  gap: clamp(0.25rem, 1vw, 0.5rem);
+
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
   min-height: clamp(2.5rem, 6vw, 3rem);
+
+  border: 1px solid #3498db;
+  border-radius: var(--radius-md);
+
+  background: var(--btn-color);
+  color: var(--light-color);
   font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 600;
   text-decoration: none;
+
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
@@ -263,56 +260,23 @@ h6 {
   transform: translateY(0);
 }
 
-.btn.outline {
-  background: transparent;
-  border-color: var(--color-border);
-  color: var(--color-text);
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-}
-
-.btn.ghost {
-  background: transparent;
-  color: var(--color-text);
-  border-color: transparent;
-}
-
-.btn-large {
-  padding: 16px 32px;
-  font-size: 1.1rem;
-}
-
+/* Variants */
 .btn-primary {
   background: var(--btn-color);
-  color: white;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  background-color: var(--hover-color);
+  color: var(--light-color);
+  border-color: #3498db;
 }
 
 .btn-secondary {
   background: var(--secondary-color);
   color: var(--light-color);
-  border: 2px solid #3498db;
-}
-
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  background-color: var(--hover-color);
-  box-shadow: var(--shadow-md);
+  border-color: #3498db;
 }
 
 /* Fluid Forms */
 .input {
   width: 100%;
-  padding: clamp(var(--space-2), 2vw, var(--space-3))
-    clamp(var(--space-3), 3vw, var(--space-4));
+  padding: clamp(var(--space-2), 2vw, var(--space-3)) clamp(var(--space-3), 3vw, var(--space-4));
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
@@ -325,75 +289,6 @@ h6 {
   margin-bottom: clamp(var(--space-1), 1vw, var(--space-2));
   color: var(--color-muted);
   font-size: var(--step--1);
-}
-
-/* Fluid Utilities */
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.mt-4 {
-  margin-top: clamp(var(--space-2), 2vw, var(--space-4));
-}
-
-.mb-4 {
-  margin-bottom: clamp(var(--space-2), 2vw, var(--space-4));
-}
-
-.p-0 {
-  padding: 0;
-}
-
-.p-4 {
-  padding: clamp(var(--space-2), 2vw, var(--space-4));
-}
-
-.p-6 {
-  padding: clamp(var(--space-4), 4vw, var(--space-6));
-}
-
-.rounded {
-  border-radius: var(--radius-md);
-}
-
-.center {
-  display: grid;
-  place-items: center;
-}
-
-/* Fluid Tables */
-.table-wrap {
-  width: 100%;
-  overflow-x: auto;
-  margin: clamp(var(--space-2), 2vw, var(--space-4)) 0;
-}
-
-/* Additional fluid utilities */
-.fluid-text {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-.fluid-heading {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-}
-
-.fluid-padding {
-  padding: clamp(var(--space-2), 3vw, var(--space-6));
-}
-
-.fluid-margin {
-  margin: clamp(var(--space-2), 3vw, var(--space-6));
-}
-
-/* Responsive images */
-.fluid-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
 }
 
 /* Media queries for fine-tuning */

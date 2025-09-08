@@ -103,6 +103,7 @@ export default function Download() {
         ))}
       </div>
 
+      {/* Note Section */}
       <Note type="Download" />
     </div>
   );

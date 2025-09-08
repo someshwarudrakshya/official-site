@@ -173,6 +173,7 @@ export default function Gallery() {
         </div>
       )}
 
+      {/* Note Section */}
       <Note type="Gallery" />
     </section>
   );
