@@ -11,7 +11,7 @@ export default function Gallery() {
       alt: "Event 1",
       year: "2023",
       event: "Annual Meeting",
-      desc: "Our 2023 Annual Meeting with members and guests.",
+      desc: "Our 3rd Annual Meeting with members and guests.",
     },
     {
       id: 2,
@@ -173,8 +173,7 @@ export default function Gallery() {
         </div>
       )}
 
-      
-        <Note type="Gallery" />
+      <Note type="Gallery" />
     </section>
   );
 }
