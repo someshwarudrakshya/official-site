@@ -10,7 +10,6 @@ const files = [
     size: "450 KB",
     url: "./public/download/1-Membership Form.pdf",
   },
-
   {
     name: "Account Opening Form",
     type: "PDF",
@@ -80,24 +79,23 @@ export default function Download() {
   return (
     <div className="container">
       <div className="section-title">
-        <h2>Downloads<span className="highlight"> Files</span></h2>
+        <h2>
+          Downloads <span className="highlight">Files</span>
+        </h2>
         <p>
-          Download the forms you need directly below. Click the download button to save the file to your device.
+          Get all necessary forms below. Click the download button to save them
+          directly to your device.
         </p>
       </div>
 
       <div className="download-grid">
         {files.map((file, index) => (
-          <div key={index} className="download-item">
-            <div className="file-info">
-              {file.icon}
-              <div className="file-details">
-                <h3>{file.name}</h3>
-                <p className="file-meta">
-                  {file.type} · {file.size}
-                </p>
-              </div>
-            </div>
+          <div key={index} className="download-card">
+            <div className="file-icon-wrap">{file.icon}</div>
+            <h3>{file.name}</h3>
+            <p className="file-meta">
+              {file.type} · {file.size}
+            </p>
             <a href={file.url} download className="download-btn">
               <FaDownload /> Download
             </a>
@@ -105,7 +103,7 @@ export default function Download() {
         ))}
       </div>
 
-            <Note type="Download" />
+      <Note type="Download" />
     </div>
   );
 }

@@ -1,9 +1,5 @@
 import Note from "../components/Note.jsx";
-import {
-  FaMapMarkerAlt,
-  FaClock,
-  FaMoneyBillWave,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaClock, FaMoneyBillWave } from "react-icons/fa";
 import "./css/Career.css";
 
 export default function Career() {
@@ -50,7 +46,7 @@ export default function Career() {
       </div>
       <div className="job-card">
         <div className="job-header">
-               <h2>{job.title}</h2>
+          <h3>{job.title}</h3>
         </div>
         <div className="job-info">
           <p>
@@ -65,21 +61,21 @@ export default function Career() {
         </div>
         <p className="job-description">{job.description}</p>
 
-        <h3>Key Responsibilities</h3>
+        <h4>Key Responsibilities</h4>
         <ul>
           {job.responsibilities.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
 
-        <h3>Requirements</h3>
+        <h4>Requirements</h4>
         <ul>
           {job.requirements.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
 
-        <h3>Benefits</h3>
+        <h4>Benefits</h4>
         <ul>
           {job.benefits.map((item, index) => (
             <li key={index}>{item}</li>
@@ -99,7 +95,5 @@ export default function Career() {
 
       <Note type="Career" />
     </div>
-
-    
   );
 }
