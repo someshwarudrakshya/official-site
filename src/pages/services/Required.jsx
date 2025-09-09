@@ -16,40 +16,81 @@ export default function RequiredDocs() {
       {/* Membership Section */}
       <section className="docs-section">
         <h2 className="required-title">To Become a Member</h2>
-        <p className="required-subtitle">Docs needed to register as a cooperative member in Nepal:</p>
+        <p className="required-subtitle">
+          Docs needed to register as a cooperative member in Nepal:
+        </p>
         <ul className="docs-list">
-          <li>Copy of Nepali Citizenship Certificate</li>
-          <li>Two recent passport-sized photographs</li>
-          <li>Completed membership application form</li>
-          <li>Payment of prescribed membership fee</li>
-          <li>Investment in the cooperative's share capital</li>
-          <li>Nominee details</li>
-          <li>Preliminary meeting minutes (if applicable)</li>
+          <li>One copy of the applicant’s Nepali Citizenship Certificate</li>
+          <li>Two recent passport-sized photo of the applicant</li>
+          <li>
+            One copy of proof of current residence (e.g., migration certificate,
+            electricity bill, water bill, land ownership certificate, etc.)
+          </li>
+          <li>
+            If a nominee is appointed: one copy of the nominee’s Citizenship
+            Certificate and one passport-sized photo
+          </li>
+          <li>
+            Duly completed membership application form and account opening form
+            (provided by the cooperative)
+          </li>
         </ul>
       </section>
 
       {/* Loan Section */}
       <section className="docs-section">
         <h2 className="required-title">To Apply for a Loan</h2>
-        <p className="required-subtitle">Docs required to apply for a loan from the cooperative:</p>
+        <p className="required-subtitle">
+          Docs required to apply for a loan from the cooperative:
+        </p>
         <ul className="docs-list">
-          <li>Copy of Nepali Citizenship Certificate</li>
-          <li>Two recent passport-sized photographs</li>
-          <li>Completed loan application form</li>
-          <li>Income proof (Salary slip or tax clearance certificate)</li>
           <li>
-            Collateral docs (Land ownership certificate, Blueprint,
-            Charkilla, etc.)
+            Membership duration of at least three months from the date of
+            joining
           </li>
-          <li>Latest tax clearance receipt or land revenue receipt (Malpot)</li>
-          <li>Business registration certificate (if applicable)</li>
-          <li>Board resolution approving the loan</li>
-          <li>Guarantor details (if required)</li>
-          <li>PAN card for loans above NPR 50 lakh</li>
+          <li>One copy of Nepali Citizenship Certificate</li>
+          <li>Four recent passport-sized photographs</li>
+          <li>
+            One copy of proof of permanent residence (e.g., migration
+            certificate, electricity bill, water bill, land ownership
+            certificate, etc.)
+          </li>
+          <li>One copy of business registration certificate</li>
+          <li>One copy of business PAN registration certificate</li>
+          <li>
+            One copy of Cottage and Small Industry Registration Certificate (if
+            applicable)
+          </li>
+          <li>One copy of tax clearance certificate</li>
+          <li>
+            One copy of tenancy/rental agreement with house owner (if
+            applicable)
+          </li>
+          <li>Details of income source(s)</li>
+          <li>
+            Details of three guarantor members along with copies of their
+            Citizenship Certificates and mobile numbers
+          </li>
+        </ul>
+
+        <h4 className="docs-subtitle">
+          Additional Documents Required for Secured Loans:
+        </h4>
+        <ul className="docs-list">
+          <li>Original land ownership certificate (लाल पुर्जा)</li>
+          <li>
+            Approved plot map / computer-generated map / tracing map (नक्सा)
+          </li>
+          <li>Boundary and land classification details (चार किल्ला)</li>
+          <li>Land revenue (मालपोत) receipt</li>
+          <li>Extract from Field Book (उत्रार)</li>
+          <li>
+            Household details and collateral approval form (if applicable)
+          </li>
         </ul>
       </section>
-      
-   {/* Note Section */}
+
+      {/* Note Section */}
       <Note type="RequiredDocuments" />
     </div>
   );

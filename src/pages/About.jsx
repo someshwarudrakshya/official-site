@@ -72,6 +72,7 @@ export default function History() {
         </div>
       </div>
 
+      {/* Note Section */}
       <Note type="About" />
     </div>
   );

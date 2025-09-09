@@ -30,7 +30,9 @@ export default function Contact() {
   return (
     <div className="container">
       <div className="section-title">
-        <h2>Contact<span className="highlight"> Us</span></h2>
+        <h2>
+          Contact<span className="highlight"> Us</span>
+        </h2>
         <p>
           Do not hesitate to reach out. Just fill in the contact form here and
           we'll be sure to reply as fast as possible.
@@ -101,9 +103,7 @@ export default function Contact() {
               </span>
               <div>
                 <h4 className="address-title">Website</h4>
-                <p className="address-text">
-                  www.someshwarudrakshya.coop.np
-                </p>
+                <p className="address-text">www.someshwarudrakshya.coop.np</p>
               </div>
             </div>
           </div>
@@ -176,7 +176,8 @@ export default function Contact() {
         </div>
       </div>
 
-            <Note type="Contact" />
+      {/* Note Section */}
+      <Note type="Contact" />
     </div>
   );
 }

@@ -19,7 +19,7 @@
 .utility-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-    border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 /* Notice Card Variant */

@@ -75,7 +75,9 @@
   background: var(--secondary-color);
   color: var(--light-color);
   padding: clamp(0.5rem, 1vw, 0.65rem) clamp(0.75rem, 2vw, 1.25rem);
-  border-radius: 9999px; /* pill style */
+  border-radius: 9999px;
+  /* pill style */
+  border-color: #3498db;
   font-size: var(--step-0);
   font-weight: 600;
   text-decoration: none;
@@ -116,6 +118,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

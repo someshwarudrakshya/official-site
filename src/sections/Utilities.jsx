@@ -86,7 +86,7 @@ export default function Utilities() {
               <strong>For Recent Highlights & Announcements</strong>
             </p>
             <p className="small mb-1">Click Link Below</p>
-            <button className="btn btn-danger" onClick={noticeCardOnClick}>
+            <button className="btn btn-primary" onClick={noticeCardOnClick}>
               Updates & Highlights
             </button>
           </div>

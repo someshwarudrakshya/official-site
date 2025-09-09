@@ -1,60 +1,71 @@
+import Note from "../components/Note.jsx";
 import {
-  FaHistory,
-  FaStar,
-  FaAward,
-  FaUsers,
+  FaPiggyBank,
+  FaHandHoldingUsd,
+  FaCalendarDay,
+  FaMoneyBillWave,
+  FaBolt,
 } from "react-icons/fa";
-import "./css/Timeline.css";
+import "./css/Services.css";
 
-export default function Timeline() {
-  const events = [
+export default function Services() {
+  const services = [
     {
-      icon: <FaHistory />,
-      title: "Beginnings: Magh 1, 2077 (Jan 15, 2021)",
+      icon: <FaPiggyBank />,
+      title: "Savings Accounts",
       description:
-        "The rise of our cooperative organization is a history born from a collective dream, unwavering faith, and the purpose of social transformation. Amid the COVID-19 pandemic and lockdown, five ordinary citizens initiated this institution with an initial capital of Rs. 143,000, aiming to empower communities facing economic inequality and social insecurity. Today, this small seed has grown to serve over 2,600 members with the support of four dedicated employees.",
-      color: "var(--secondary-color)",
+        "We provide secure and reliable savings accounts that help members build financial stability for the future. With attractive interest rates and flexible options, you can grow your wealth safely with us.",
     },
     {
-      icon: <FaStar />,
-      title: "Historic Moment of 2078 (2021-2022)",
+      icon: <FaHandHoldingUsd />,
+      title: "Affordable Loans",
       description:
-        "Institution recognized and registered in the National Cooperative Federation (NCF), highlighting our commitment to cooperative values and expanding member services.",
-      color: "var(--primary-color)",
+        "Our cooperative offers low-interest loans with flexible repayment options. Whether it’s for personal, business, or emergency needs, we ensure loans are accessible and member-friendly.",
     },
     {
-      icon: <FaAward />,
-      title: "Achievement in 2079 (2022-2023)",
+      icon: <FaCalendarDay />,
+      title: "Daily Savings",
       description:
-        "Received recognition for outstanding contributions to financial inclusion and cooperative development.",
-      color: "var(--accent-color)",
+        "Encouraging financial discipline, our daily savings scheme allows members to deposit small amounts regularly, ensuring gradual but steady financial growth.",
     },
     {
-      icon: <FaUsers />,
-      title: "Growing Family",
+      icon: <FaMoneyBillWave />,
+      title: "Easy Withdrawals",
       description:
-        "Membership surpassed 2,600 members, strengthening our community-driven initiatives.",
-      color: "var(--hover-color)",
+        "We believe in easy access to your money. Members can withdraw their savings quickly and conveniently whenever they need them without unnecessary delays.",
+    },
+    {
+      icon: <FaBolt />,
+      title: "Fast Processing",
+      description:
+        "Our cooperative ensures quick approval and processing of financial requests. From loans to withdrawals, we focus on efficiency and speed to serve you better.",
     },
   ];
 
   return (
     <div className="container">
-      <div className="timeline">
-        {events.map((event, index) => (
-          <div className="timeline-card" key={index}>
-            <div className="timeline-icon" style={{ color: event.color }}>
-              {event.icon}
-            </div>
-            <div className="timeline-content">
-              <h3 className="timeline-title" style={{ color: event.color }}>
-                {event.title}
-              </h3>
-              <p className="timeline-description">{event.description}</p>
-            </div>
+      <div className="section-title">
+        <h2>
+          Our <span className="highlight">Services</span>
+        </h2>
+        <p>
+          Discover a range of financial services designed to empower our members
+          and promote economic growth.
+        </p>
+      </div>
+
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-icon">{service.icon}</div>
+            <h2 className="service-title">{service.title}</h2>
+            <p className="service-description">{service.description}</p>
           </div>
         ))}
       </div>
+
+      {/* Note Section */}
+      <Note type="Services" />
     </div>
   );
 }
