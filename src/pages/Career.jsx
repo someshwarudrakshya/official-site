@@ -33,7 +33,7 @@ export default function Career() {
   };
 
   return (
-    <div className="container">
+    <section className="container">
       <div className="section-title">
         <h2>
           Join <span className="highlight">Our Team</span>
@@ -95,6 +95,6 @@ export default function Career() {
 
       {/* Note Section */}
       <Note type="Career" />
-    </div>
+    </section>
   );
 }
