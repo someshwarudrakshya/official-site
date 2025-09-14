@@ -1,8 +1,3 @@
-:root {
-  --header-height-full: 7rem;
-  --header-height-small: 4rem;
-}
-
 /* Full header */
 .header {
   width: 100%;
@@ -52,11 +47,6 @@
 .header-small .header-right {
   opacity: 0;
   pointer-events: none;
-}
-
-/* Push page content down (header + navbar) */
-body {
-  padding-top: calc(var(--header-height-full) + 3rem);
 }
 
 /* Responsive */

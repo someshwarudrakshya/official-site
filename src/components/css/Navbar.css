@@ -110,13 +110,15 @@ nav {
 .mobile-menu {
   display: none;
   font-size: clamp(1.5rem, 4vw, 2rem);
+  background-color: var(--card-bg);
   color: var(--dark-color);
   cursor: pointer;
   position: fixed;
   right: var(--space-3);
   top: calc(var(--header-height-full) + var(--space-2));
   z-index: 1102;
-  background: transparent;
+  background: var(--card-bg);
+  border-radius: 5px;
   border: none;
   padding: var(--space-1);
   line-height: 1;
@@ -158,7 +160,7 @@ nav {
     top: calc(var(--header-height-full));
     right: 0;
     left: auto;
-    width: 82%;
+    width: 50%;
     max-width: 380px;
     height: calc(100vh - var(--header-height-full));
     background: var(--card-bg);
@@ -194,15 +196,13 @@ nav {
     font-weight: 600;
     color: var(--dark-color);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    background: transparent;
     font-weight: 500;
     font-size: var(--step-0);
   }
 
   .nav-links>li>a:hover,
   .nav-links>li>a.active-link {
-    background: var(--background);
-    border-bottom-color: rgba(0, 0, 0, 0.09);
+    border-bottom: 5px solid var(--secondary-color);
   }
 
   /* Mobile dropdowns */
@@ -213,7 +213,7 @@ nav {
     visibility: visible;
     display: none;
     box-shadow: none;
-    background: transparent;
+    background: var(--card-bg);
     padding: 0;
   }
 

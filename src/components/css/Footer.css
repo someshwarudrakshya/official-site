@@ -113,12 +113,6 @@
   margin-bottom: 0;
 }
 
-.developed-by {
-  margin-top: var(--space-2);
-  font-size: var(--step--1);
-  color: var(--light-color);
-}
-
 .dev-link {
   color: var(--light-color);
   transition: color 0.3s ease;
@@ -134,7 +128,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 @media (max-width: 576px) {
   footer {
