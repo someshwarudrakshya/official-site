@@ -25,6 +25,11 @@
   margin-left: -2px;
 }
 
+.timeline h3 {
+  font-size: 1.5rem;
+
+}
+
 .timeline-item {
   position: relative;
   width: 50%;

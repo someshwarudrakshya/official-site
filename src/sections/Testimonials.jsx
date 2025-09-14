@@ -7,30 +7,46 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./css/Testimonials.css";
 
+import Rita from "../assets/testomonial/Rita.avif";
+import Moti from "../assets/testomonial/Motiram.avif";
+import Bishal from "../assets/noFace.avif";
+
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "Becoming a member was a turning point in my financial life. The support has been incredible!",
-      name: "James Wilson",
-      title: "Small Business Owner",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      quote: `म स्थापना देखिकै सदस्य हुँ।
+यो सहकारी हरेक सेवामा भरपर्दो छ।
+स्टाफको सहयोग सधैं सकारात्मक हुन्छ।
+मलाई कहिल्यै निराश पारेको छैन।
+धन्यवाद उत्कृष्ट सेवाका लागि!`,
+      name: "रिता मगर",
+      title: "होटल व्यवसायी",
+      image: Rita,
       rating: 5,
     },
     {
       id: 2,
-      quote: "I've been able to save more money and get better interest rates. Highly recommend joining!",
-      name: "Sarah Johnson",
-      title: "Teacher",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      quote: `पहिलो भेटमै राम्रो अनुभव भयो।
+हामीले तुरुन्तै सेवामा विश्वास गर्यौं।
+टिमले बढी प्रयास गरेर साथ दिन्छ।
+प्रत्येक कुरा ध्यानपूर्वक गरिन्छ।
+धन्यवाद अद्भुत सेवाको लागि!`,
+      name: "मोति राम चौधरी",
+      title: "हटिया व्यवसायी",
+      image: Moti,
       rating: 4.5,
     },
     {
       id: 3,
-      quote: "The process was transparent with no hidden fees. I feel secure with my savings here.",
-      name: "Michael Chen",
-      title: "Software Engineer",
-      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=200&q=80",
+      quote: `I had high expectations.
+This SACCOS exceeded them all.
+Service was smooth and caring.
+I felt valued every moment.
+I now recommend it to everyone!`,
+      name: "Bishal Shrestha",
+      title: "स्थानीय बुद्दिजीवी",
+      image: Bishal,
       rating: 5,
     },
   ];
@@ -64,7 +80,8 @@ export default function Testimonials() {
                 <p>“{t.quote}”</p>
               </blockquote>
 
-              <footer>
+              {/* renamed footer */}
+              <div className="testimonial-footer">
                 <div className="member-image">
                   <img src={t.image} alt={t.name} />
                 </div>
@@ -76,7 +93,7 @@ export default function Testimonials() {
                     {t.rating % 1 ? "☆" : ""}
                   </div>
                 </div>
-              </footer>
+              </div>
             </div>
           </SwiperSlide>
         ))}

@@ -12,18 +12,13 @@
   gap: clamp(var(--space-2), 2.5vw, var(--space-4));
 }
 
-@media (min-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 /* Each Stat */
 .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(var(--space-1), 1vw, var(--space-2)); /* reduced padding */
+  padding: clamp(var(--space-1), 1vw, var(--space-2));
+  /* reduced padding */
   background: var(--card-bg);
   border-radius: var(--radius-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -39,14 +34,16 @@
 
 /* Icon */
 .stat-icon {
-  font-size: clamp(1rem, 3vw, 1.5rem); /* smaller */
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  /* smaller */
   color: var(--accent-color);
   margin-bottom: var(--space-1);
 }
 
 /* Animated Number */
 .stat-number {
-  font-size: clamp(1rem, 3.5vw, 1.5rem); /* smaller */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  /* smaller */
   font-weight: 700;
   color: #2563eb;
   transition: color 0.3s ease;
@@ -60,8 +57,15 @@
 /* Label */
 .stat-label {
   margin-top: var(--space-1);
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem); /* reduced text size */
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  /* reduced text size */
   color: #4b5563;
   font-weight: 600;
   line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
